@@ -1,0 +1,143 @@
+.product{
+    &-item{
+        position: relative;
+        cursor: pointer;
+        &:hover .product-number{
+            animation-name: spin;
+            animation-duration: 5000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear; 
+        }
+    }
+    &-heading,
+    &-desc{
+        text-align: center;
+        color: $orange-text;
+    }
+    &-heading{
+        font-size: $text-xl;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+        letter-spacing: 5px;
+        font-weight: $text-extra-bold;
+    }
+    &-title{
+        background-color:$yellow-color;
+        padding: 150px 0 70px 0;
+    }
+    &-desc{
+        font-size: $text-md;
+        line-height: 1.6;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    &-content{
+        position: relative;
+        background-position: center;
+        background-repeat: no-repeat; 
+        background-size: cover;
+    }
+    &-number{
+        position: absolute;
+        top: -40px;
+        left: 0;
+        
+    }
+    &-bottom{
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 2rem;
+        bottom: -35px;
+        background-color: $secondary-color;
+    }
+    &-button{
+        display: flex;
+        align-items: center;
+        padding: 20px 10px 16px 28px ;
+        border: 3px solid $primary-color;
+    }
+    &-label,
+    &-text{
+        font-size: $text-md;
+        font-weight: $text-extra-bold;
+        text-transform: uppercase;
+    }
+    &-text{
+        border-radius: 50%;
+        color: $secondary-color;
+        background-color: $primary-color;
+        padding: 21px 15px 21px 17px;
+        line-height: 1.2;
+    }
+    @keyframes spin {
+        from {
+            transform:rotate(0deg);
+        }
+        to {
+            transform:rotate(360deg);
+        }
+    }
+    &-img{
+        width: 100%;
+        object-fit: cover;
+    }
+    &-list{
+        display: flex;
+        align-items: center;
+        padding-bottom: 150px;
+    }
+}
+@include breakpoint-down(xlarge){
+    .product-label,
+    .product-text{
+        font-size: $text-body;
+    }
+    .product-text{
+        padding: 14px 10px 11px 10px;
+    }
+    .product-button{
+        padding: 10px 5px 8px 11px;
+    }
+    .product-bottom{
+        bottom: -40px;
+    }
+    .product-number{
+        max-width: 80px;
+    }
+    .product-heading{
+        margin-bottom: 20px;
+    }
+    .product-title{
+        padding: 100px 0 50px 0;
+    }
+}
+
+@include breakpoint-down(medium-screen){
+    .product-list{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .product-item{
+        margin-bottom: 5rem;
+    }
+    .product-content{
+        padding-top: 1rem;
+    }
+    .product-bottom{
+        margin: 0 5rem;
+        bottom: -20px;
+    }
+}
+@include breakpoint-down(small){
+    .product-bottom{
+        margin: 0 2rem;
+        bottom: -20px;
+    }
+    .product-item{
+        margin-bottom: 7rem;
+    }
+    .product-title{
+        font-size: $text-md-35;
+    }
+}

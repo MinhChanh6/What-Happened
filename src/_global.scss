@@ -1,0 +1,19 @@
+body {
+    font-family: $primary-font;
+    font-size: $text-xs;
+    box-sizing: border-box;
+    margin: 0;
+	padding: 0;
+	border: 0;
+}
+.App {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.container{
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+}

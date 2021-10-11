@@ -1,0 +1,38 @@
+//Colors
+$primary-color: #1A1A1A;
+$secondary-color: #FFFFFF;
+$orange-color: #ea4913;
+$orange-text: #f96400;
+$yellow-color: #fcd32a;
+$price-color : #222222;
+$rate-color: #666666;
+$blue-section: #0565bb;
+$news-color: #110e03;
+$news-left: #ff5500;
+$pray-color: #f4f4f4;
+//Font-family
+@import './MonsteserratTypeFace/stylesheet.css';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+$primary-font: 'Montserrat', sans-serif;
+$secondary-font: 'Noto Sans KR', sans-serif;
+
+//Weights
+$text-light: 300;
+$text-regular: 400;
+$text-semi-bold: 600;
+$text-bold: 700;
+$text-extra-bold: 800;
+
+//Font-size
+$text-xs: 14px;
+$text-sm: 16px;
+$text-body: 18px;
+$text-md: 20px;
+$text-md-3: 23px;
+$text-md-5: 25px;
+$text-md-30: 30px;
+$text-md-35: 35px;
+$text-lg: 45px;
+$text-xl: 50px;
+$text-xxl: 64px;
+$text-xxxl: 172px;

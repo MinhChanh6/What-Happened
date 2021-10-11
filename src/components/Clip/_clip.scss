@@ -1,0 +1,200 @@
+.clip{
+    padding: 140px 0;
+    position: relative;
+    margin-bottom: 10rem;
+    &::after,
+    &::before {
+        content: "";
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+    &::after {
+        background: url("./assets/images/Video-Object4.png") no-repeat;
+        max-width: 200px;
+        min-height: 420px;
+        top: 20%;
+        object-fit: cover;
+    }
+    &::before{
+        background: url("./assets/images/Video-Object5.png") no-repeat;
+        max-width: 400px;
+        min-height: 800px;
+        object-fit: cover;
+        right: 0;
+        top: 50%;
+    }
+    &-heading{
+        text-align: center;
+        margin-bottom: 70px;
+        position: relative;
+    }
+    &-title{
+        font-size: $text-lg;
+        font-weight: $text-extra-bold;
+        margin-bottom: 50px;
+        line-height: 1.2;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+    }
+    &-desc{
+        font-size: $text-md;
+        max-width: 700px;
+        width: 100%;
+        margin: 0 auto;
+        line-height: 1.6;
+        margin-bottom: 50px;
+    }
+    &-main{
+        width: 100%;
+        max-width: 1250px;
+        margin: 0 auto;
+        border: 3px solid $primary-color;
+        position: relative;
+
+        &::before,
+        &::after{
+            content: "";
+            width: 100%;
+            position: absolute;
+            z-index: -1;
+        }
+        &::before{
+            background: url("./assets/images/Video-Object7.png") no-repeat;
+            max-width: 550px;
+            min-height: 350px;
+            left: -9%;
+            bottom: -35%;
+        }
+        &::after{
+            max-width: 100px;
+            min-height: 100px;
+            left: 70%;
+            bottom: -20%;
+            background: url("./assets/images/Video-Object6.png") no-repeat;
+        }
+    }
+}
+.video-heading{
+    background-color: $primary-color;
+    padding: 17px 18px;
+}
+.video-title{
+    color: $secondary-color;
+    font-size: $text-md-5;
+}
+.video-line{
+    width: calc(100% - 350px);
+
+    > div {
+        width: 100%;
+        height: 3px;
+        background-color: $secondary-color;
+    }
+    > div:first-of-type{
+        margin-bottom: 10px;
+    }
+}
+.video-url{
+    border-bottom: 3px solid $primary-color;
+    padding: 12px 18px 12px 25px;
+    background-color: $secondary-color;
+}
+.video-heading,
+.video-url{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.video-link,
+.video-title{
+    text-transform: uppercase;
+    font-weight: $text-extra-bold;
+}
+.video-link{
+    color: $primary-color;
+    font-size: $text-body;
+}
+.video-arrow{
+    font-size: $text-md-5;
+    color: $primary-color;
+    font-weight: $text-extra-bold;
+    font-family: $secondary-font;
+}
+.video-wrap{
+    margin-bottom: -5px;
+}
+.video-video{
+    width: 100%;
+    height: auto;
+}
+.video-object8,
+.video-object3{
+    position: absolute;
+}
+.video-object8{
+    top: 0;
+    left: 10%;
+}
+.video-object3{
+    right: 0;
+    top: 10%;
+}
+
+@include breakpoint-down(large-screen){
+    .video-object3{
+        max-width: 200px;
+        top: -50%;
+        z-index: -1;
+    }
+    .clip::after,
+    .clip::before{
+        display: none;
+    }
+}
+
+@include breakpoint-down(medium-screen){
+    .video-object3{
+        max-width: 150px;
+        top: -60%;
+    }
+    .clip-main::after{
+        bottom: -25%;
+    }
+}
+
+@include breakpoint-down(small){
+    .clip{
+        margin-bottom: 4rem;
+    }
+    .video-object8{
+        max-width: 100px;
+    }
+    .clip-title{
+        font-size: 38px;
+        margin-bottom: 25px;
+    }
+    .clip-desc {
+        font-size: $text-body;
+        margin-bottom: 30px;
+    }
+    .video-heading{
+        padding: 13px 15px;
+    }
+    .video-title{
+        font-size: $text-md;
+    }
+    .video-url{
+        padding: 11px 13px;
+    }
+    .video-link{
+        font-size: $text-xs;
+    }
+    .clip-main::before{
+        display: none;
+    }
+    .clip-main::after{
+        bottom: -40%;
+    }
+}

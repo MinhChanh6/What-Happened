@@ -1,0 +1,91 @@
+.footer{
+    border-top: 1px solid $pray-color;
+    border-bottom: 1px solid $pray-color;
+    padding: 50px 0 70px 0;
+
+    &-flex{
+        display: flex;
+    }
+    &-logo{
+        width: 100%;
+        max-width: 280px;
+    }
+    &-heading{
+        color: $primary-color;
+        font-weight: $text-semi-bold;
+        line-height: 2.86;
+    }
+    &-desc{
+        font-weight: $text-light;
+        font-family: $secondary-font;
+        line-height: 2.14;
+        color: #333333;
+    }
+    &-list {
+        margin-left: auto;
+        display: flex;
+    }
+    &-item:not(:last-child){
+        margin-right: 100px;
+    }
+    &-coppy{
+        padding: 20px 0 120px 0;
+    }
+}
+.coppy-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.coppy-social {
+    display: flex;
+    align-items: center;
+}
+.coppy-content{
+    font-family: $secondary-font;
+    color: #a9a9a9;
+    line-height: 1.71;
+    font-weight: $text-light;
+}
+.coppy-icon:not(:last-child){
+    margin-right: 23px;
+}
+@include breakpoint-down(medium-screen){
+    .footer-list{
+        flex-wrap: wrap;
+    }
+    .footer-item:not(:last-child){
+        margin-right: 22px;
+    }
+    .coppy-flex{
+        display: block;
+    }
+    .coppy-content{
+        margin-bottom: 25px;
+    }
+}
+
+@include breakpoint-down(small){
+    .footer-flex{
+        display: block;
+    }
+    .footer-item{
+        width: calc(100%/2 - 30px);
+        &:not(:last-child){
+            margin-right: 30px;
+        }
+    }
+
+    .footer-logo{
+        max-width: 100%;
+        margin-bottom: 25px;
+    }
+    .coppy-symbol{
+        margin-bottom: 10px;
+    }
+    .coppy-content{
+        line-height: 1.9;
+    }
+}
+
+
