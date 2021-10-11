@@ -704,18 +704,6 @@ body {
     font-size: 35px;
   }
 }
-.cursor {
-  z-index: 10;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  border: 1px solid #1A1A1A;
-  overflow: hidden;
-  position: fixed;
-  left: -20px;
-  top: -20px;
-}
-
 .productlist {
   padding: 140px 0;
   display: flex;
