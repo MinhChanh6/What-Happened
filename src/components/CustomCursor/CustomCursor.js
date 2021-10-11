@@ -1,16 +1,16 @@
 import React from 'react'
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import { TweenMax } from 'gsap/gsap-core';
 
 const CustomCursor = () => {
-    const cursorRef = React.useRef(null);
+    const cursorRef = useRef(null);
 
     React.useEffect(() => {
         window.addEventListener('mousemove', (e) => {
             const { clientX, clientY } = e;
+            const tl = gsap.timeline();
 
-            TweenMax.to(cursorRef.current, 0.3, {
+            tl.to(cursorRef.current, 0.3, {
                 x: clientX,
                 y: clientY
             });
