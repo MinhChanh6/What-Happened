@@ -1,12 +1,11 @@
 .cursor {
-    z-index: 1000;
+    z-index: 10;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    background-color: $secondary-color;
+    width: 45px;
+    height: 45px;
+    border: 1px solid $primary-color;
     overflow: hidden;
     position: fixed;
-    left: -10px;
-    top: -10px;
-    mix-blend-mode: exclusion;
+    left: -20px;
+    top: -20px;
 }
