@@ -3,7 +3,6 @@ import Banner from './components/Banner/Banner';
 import BestProduct from './components/BestProduct/BestProduct';
 import Story from './components/BrandStory/Story';
 import Clip from "./components/Clip/Clip";
-import CustomCursor from './components/CustomCursor/CustomCursor';
 import Header from './components/Header/Header';
 import Introduction from './components/Introduction/Introduction';
 import News from './components/News/News';
